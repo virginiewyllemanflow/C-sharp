@@ -1,0 +1,7 @@
+# Ignore the folder named 'temp'
+.vscode/
+LibraryApp/
+
+# Ignore specific file
+ex_1.md
+C-sharp_docs.sln
