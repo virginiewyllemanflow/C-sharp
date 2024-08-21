@@ -1,0 +1,22 @@
+site_name: My Docs
+theme:
+  name: readthedocs
+nav:
+  - Home: index.md
+  - Data types: 2_data_types.md
+  - Arithmetic operations: 3_arithmetic_operations.md
+  - Working with text: 4_working_with_text.md
+  - Booleans: 5_boolean.md
+  - Conditional statements: 6_conditional_statements.md
+  - Methods: 7_methods.md
+  - Alternate expressions: 8_alternate_expressions.md
+  - Arrays: 9_data_structures_arrays.md
+  - Loops: 10_loops.md
+  - Classes: 11_classes.md
+  - Interfaces: 12_interfaces.md
+  - Inheritance: 13_inheritance.md
+  - References and polymorphism: 14_references_polymorphism.md
+  - The object class: 15_object_class.md
+  - Strings (advanced): 16_strings_advanced.md
+  - Lists: 17_lists.md
+  - LINQ: 18_LINQ.md
