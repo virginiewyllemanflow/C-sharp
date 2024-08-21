@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Booleans - My Docs</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Booleans";
+        var mkdocs_page_input_path = "5_boolean.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> My Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../2_data_types/">Data types</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../3_arithmetic_operations/">Arithmetic operations</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../4_working_with_text/">Working with text</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Booleans</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#boolean-expressions">Boolean expressions</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#comparison-operators">Comparison operators</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#logical-operators-aka-boolean-operators">Logical operators (aka boolean operators)</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../6_conditional_statements/">Conditional statements</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../7_methods/">Methods</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../8_alternate_expressions/">Alternate expressions</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../9_data_structures_arrays/">Arrays</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../10_loops/">Loops</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../11_classes/">Classes</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../12_interfaces/">Interfaces</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../13_inheritance/">Inheritance</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../14_references_polymorphism/">References and polymorphism</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../15_object_class/">The object class</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../16_strings_advanced/">Strings (advanced)</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../17_lists/">Lists</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../18_LINQ/">LINQ</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">My Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Booleans</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="boolean-data-type">Boolean data type</h1>
+<hr />
+<p>The boolean data type can take the values <code>true</code> and <code>false</code>, these are binaries. The boolean values are not strings.</p>
+<hr />
+<ul>
+<li><a href="#boolean-data-type">Boolean data type</a></li>
+<li><a href="#boolean-expressions">Boolean expressions</a><ul>
+<li><a href="#comparison-operators">Comparison operators</a></li>
+<li><a href="#logical-operators-aka-boolean-operators">Logical operators (aka boolean operators)</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="boolean-expressions">Boolean expressions</h2>
+<p>Boolean expressions are expressions that return a boolean value (or in other words evaluate to a boolean). They contain <strong>comparison operators</strong> and/or <strong>logical operators</strong>. </p>
+<p>You can declare a boolean variable as a boolean expression, the return value will be a boolean. Boolean expressions can evaluate integers, doubles, strings, variables, and even booleans.</p>
+<h3 id="comparison-operators">Comparison operators</h3>
+<table>
+<thead>
+<tr>
+<th>Comparison operator</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>==</code></td>
+<td>evaluates whether the two sides of the expression are equal</td>
+</tr>
+<tr>
+<td><code>!=</code></td>
+<td>evaluates whether the two sides of the expression are not equal</td>
+</tr>
+<tr>
+<td><code>&gt;</code></td>
+<td>evaluates whether the left side is greater than the right side</td>
+</tr>
+<tr>
+<td><code>&lt;</code></td>
+<td>evaluates whether the left side is smaller than the right side</td>
+</tr>
+<tr>
+<td><code>&gt;=</code></td>
+<td>evaluates whether the left side is greater than or equal to the right side</td>
+</tr>
+<tr>
+<td><code>&lt;=</code></td>
+<td>evaluates whether the left side is smaller than or equal to the right side</td>
+</tr>
+</tbody>
+</table>
+<h3 id="logical-operators-aka-boolean-operators">Logical operators (aka boolean operators)</h3>
+<p>Logical operators can appear in boolean expressions. They take boolean values as input and as output. You can chain multiple logical statements in one boolean expression.</p>
+<table>
+<thead>
+<tr>
+<th>Logical operator</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AND</td>
+<td><code>&amp;&amp;</code></td>
+<td>true if both sides evaluate to true</td>
+</tr>
+<tr>
+<td>OR</td>
+<td><code>II</code></td>
+<td>true if one or two sides evaluate to true</td>
+</tr>
+<tr>
+<td>NOT</td>
+<td><code>!</code></td>
+<td>true if evaluates to false, false if evaluates to true</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Note:</strong> <code>!</code> comes in the beginning of the expression. <code>AND</code> and <code>OR</code> come in between the two sides of the expression.</p>
+</blockquote>
+<p>example of a boolean exercise I did:</p>
+<pre><code class="language-C#">using System;
+
+namespace Review
+{
+  class Program
+  {
+    static void Main(string[] args)
+    {
+      // Password declaration
+      string password = &quot;abc!de&quot;;
+
+      // Check whether there is an uppercase character
+      bool upperCheckChar = false;
+      bool upperCheck = false;
+
+      // Check if there are no symbols
+      bool symbolCheckChar = false;
+      bool symbolCheck = false;
+
+      foreach (char i in password) {
+
+        upperCheckChar = (i == Char.ToUpper(i));
+        if (upperCheckChar) {
+          upperCheck = true;
+          break;
+        }
+
+        symbolCheckChar = ((i == Convert.ToChar(&quot;!&quot;)) || (i == Convert.ToChar(&quot;?&quot;)) || (i == Convert.ToChar(&quot;.&quot;)) || (i == Convert.ToChar(&quot;@&quot;)) || (i == Convert.ToChar(&quot;#&quot;)));
+
+        if (symbolCheckChar) {
+          symbolCheck = true;
+          break;
+        }
+      }
+
+      Console.WriteLine($&quot;Contains uppercase letter: {upperCheck}&quot;);
+      Console.WriteLine($&quot;Contains symbol: {symbolCheck}&quot;);
+
+      // Check validity of password
+      bool passwordCheck = (upperCheck &amp;&amp; !symbolCheck);
+      Console.WriteLine($&quot;Password OK: {passwordCheck}&quot;);
+    }
+  }
+}
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../4_working_with_text/" class="btn btn-neutral float-left" title="Working with text"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../6_conditional_statements/" class="btn btn-neutral float-right" title="Conditional statements">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../4_working_with_text/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../6_conditional_statements/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

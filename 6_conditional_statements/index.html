@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Conditional statements - My Docs</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Conditional statements";
+        var mkdocs_page_input_path = "6_conditional_statements.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> My Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../2_data_types/">Data types</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../3_arithmetic_operations/">Arithmetic operations</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../4_working_with_text/">Working with text</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../5_boolean/">Booleans</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Conditional statements</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#types-of-conditional-statements">Types of conditional statements</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#if-statements">if statements</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#ifelse-statements">if/else statements</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#else-if-statements">else if statements</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#switch-statements">switch statements</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#switch-statement-example">switch statement example</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#switch-statement-example-with-conditions-advanced">switch statement example with conditions (advanced)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#ternary-operators">Ternary operators</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#example-of-ternary-operators">Example of ternary operators</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../7_methods/">Methods</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../8_alternate_expressions/">Alternate expressions</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../9_data_structures_arrays/">Arrays</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../10_loops/">Loops</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../11_classes/">Classes</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../12_interfaces/">Interfaces</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../13_inheritance/">Inheritance</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../14_references_polymorphism/">References and polymorphism</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../15_object_class/">The object class</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../16_strings_advanced/">Strings (advanced)</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../17_lists/">Lists</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../18_LINQ/">LINQ</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">My Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Conditional statements</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="conditional-statements">Conditional statements</h1>
+<ul>
+<li><a href="#conditional-statements">Conditional statements</a></li>
+<li><a href="#types-of-conditional-statements">Types of conditional statements</a><ul>
+<li><a href="#if-statements">if statements</a></li>
+<li><a href="#ifelse-statements">if/else statements</a></li>
+<li><a href="#else-if-statements">else if statements</a></li>
+<li><a href="#switch-statements">switch statements</a></li>
+<li><a href="#switch-statement-example">switch statement example</a></li>
+<li><a href="#switch-statement-example-with-conditions-advanced">switch statement example with conditions (advanced)</a></li>
+<li><a href="#ternary-operators">Ternary operators</a></li>
+<li><a href="#example-of-ternary-operators">Example of ternary operators</a></li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> Familiarize yourself with <a href="../5_boolean/">boolean expressions</a> before you dig into this topic.</p>
+</blockquote>
+<h2 id="types-of-conditional-statements">Types of conditional statements</h2>
+<ul>
+<li><code>if</code> statements</li>
+<li><code>if/else</code> statements</li>
+<li><code>else if</code> statements</li>
+<li><code>switch</code> statements</li>
+<li>Ternary operations: <code>?</code></li>
+</ul>
+<h3 id="if-statements">if statements</h3>
+<p><code>If</code> statements are conditional statements that execute a block of code if the condition is true. Otherwise, the code block is skipped.</p>
+<pre><code class="language-C#">if (boolean expression) 
+{
+    execute this code;
+}
+</code></pre>
+<h3 id="ifelse-statements">if/else statements</h3>
+<p>It is an extension of the <code>if</code> statement, we add an <code>else</code> and a block of code that is executed if the if condition is false.</p>
+<pre><code class="language-C#">if (boolean expression) {
+    execute this code;
+}
+else {
+    execute this code;
+}
+</code></pre>
+<blockquote>
+<p><strong>Note:</strong> if/else is one statement, so don't put a semicolon after the if statement if you want to add an else!</p>
+</blockquote>
+<h3 id="else-if-statements">else if statements</h3>
+<p>If you want to handle more than two possible scenario's an <code>if/else</code> statement won't be enough. For chaining if statements, use <code>else if</code>'s.</p>
+<p>Remarks:</p>
+<ul>
+<li>You can use as many <code>else if</code>'s as you want</li>
+<li>You can still end with en else statement to capture any unmatched conditions, but you don't have to</li>
+<li>You don't put semicolons in between the statements because they are one statement.</li>
+</ul>
+<pre><code class="language-c#">if (boolean expression) 
+{
+    execute this code;
+}
+else if (boolean expression) 
+{
+    execute this code;
+}
+else if (boolean expression) 
+{
+    execute this code;
+}
+else 
+{
+    execute this code;
+}
+</code></pre>
+<h3 id="switch-statements">switch statements</h3>
+<p>When you have a lot of different values of a variable to check (I would say &gt;3) you can avoid the repetition of the <code>else if</code> codeblock by using <code>switch</code> statements.</p>
+<blockquote>
+<p><strong>Note:</strong> Switch statements are not well-suited for conditional expressions. Use <code>else if</code> in that case.</p>
+</blockquote>
+<ul>
+<li>
+<p>Every case has a <code>break</code> statement that allows you to exit the <code>switch</code> statement after a case has been matched and the relevant code executed.</p>
+</li>
+<li>
+<p>Every <code>switch</code> statement has a default statement that captures those instances that do not match a case.</p>
+</li>
+</ul>
+<pre><code class="language-c#">switch(variable that is addressed) 
+{
+    case &quot;enter condition&quot;:
+        execute this code;
+        break;
+    case &quot;enter condition&quot;:
+        execute this code;
+        break;
+    default:
+        execute this code:
+        break;
+}
+</code></pre>
+<h4 id="switch-statement-example">switch statement example</h4>
+<pre><code class="language-python">Console.WriteLine(&quot;Please choose a movie genre.&quot;);
+      string genre = Console.ReadLine();
+      switch (genre) 
+      {
+        case &quot;Horror&quot;:
+          Console.WriteLine(&quot;Psycho&quot;);
+          break;
+        case &quot;Drama&quot;:
+          Console.WriteLine(&quot;Citizen Kane&quot;);
+          break;
+        case &quot;Comedy&quot;:
+          Console.WriteLine(&quot;Duck Soup&quot;);
+          break;
+        case &quot;Adventure&quot;:
+          Console.WriteLine(&quot;King Kong&quot;);
+          break;
+        case &quot;Science Fiction&quot;:
+          Console.WriteLine(&quot;2001: A Space Odyssey&quot;);
+          break;
+        default:
+          Console.WriteLine(&quot;No movie found&quot;);
+          break;
+      }
+</code></pre>
+<h4 id="switch-statement-example-with-conditions-advanced">switch statement example with conditions (advanced)</h4>
+<pre><code class="language-c#">int number = 6;
+int guess = 0;
+Console.WriteLine(&quot;Guess a number between 1 and 10.&quot;);
+
+while (guess != 6) 
+{
+    guess = Convert.ToInt32(Console.ReadLine());
+    switch (guess) 
+    {
+        case int n when n == number:
+            Console.WriteLine(&quot;Congratulations! You guessed it.&quot;);
+            break;
+        case int n when ((n &gt; number) &amp;&amp; !(n &gt; 10)):
+            Console.WriteLine(&quot;That's too high!&quot;);
+            break;
+        case int n when ((n &lt; number) &amp;&amp; !(n &lt; 1)):
+            Console.WriteLine(&quot;That's too low!&quot;);
+            break;
+        default:
+            Console.WriteLine(&quot;That's not a number between 1 and 10..&quot;);
+            break;
+    }
+}
+</code></pre>
+<h3 id="ternary-operators">Ternary operators</h3>
+<p>When you need to make a binary decision (two possible conditions) you can use a ternary operator (<code>?</code>) instead of the <code>if/else</code> statement. It has shorter syntax but is less readable.</p>
+<pre><code class="language-c#">string result = (conditional expression) ? &quot;value of result when true&quot; : &quot;value of result when false&quot;
+
+</code></pre>
+<h4 id="example-of-ternary-operators">Example of ternary operators</h4>
+<pre><code class="language-c#">int pepperLength = 4;
+
+string message = (pepperLength &gt;= 3.5) ? &quot;ready!&quot;:&quot;wait a little longer&quot;;
+
+Console.WriteLine(message);
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../5_boolean/" class="btn btn-neutral float-left" title="Booleans"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../7_methods/" class="btn btn-neutral float-right" title="Methods">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../5_boolean/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../7_methods/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

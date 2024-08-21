@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Arrays - My Docs</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Arrays";
+        var mkdocs_page_input_path = "9_data_structures_arrays.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> My Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../2_data_types/">Data types</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../3_arithmetic_operations/">Arithmetic operations</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../4_working_with_text/">Working with text</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../5_boolean/">Booleans</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../6_conditional_statements/">Conditional statements</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../7_methods/">Methods</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../8_alternate_expressions/">Alternate expressions</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Arrays</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#syntax">Syntax</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#declaring-an-array">Declaring an array</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#initializing-an-array">Initializing an array</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#declaring-and-initializing-an-array">Declaring and initializing an array</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#an-empty-array">An empty array</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#built-in-properties-and-methods">Built-in properties and methods</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#accessing-array-elements">Accessing array elements</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#array-editing">Array editing</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#printing-an-array">Printing an array</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../10_loops/">Loops</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../11_classes/">Classes</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../12_interfaces/">Interfaces</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../13_inheritance/">Inheritance</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../14_references_polymorphism/">References and polymorphism</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../15_object_class/">The object class</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../16_strings_advanced/">Strings (advanced)</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../17_lists/">Lists</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../18_LINQ/">LINQ</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">My Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Arrays</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="arrays">Arrays</h1>
+<hr />
+<p>Arrays are <strong>data structures</strong>. Data structures store larger amounts of information in an organized way. An array is a <strong>linear list of elements of the same data type</strong>. Each element has a specific position in the list.</p>
+<blockquote>
+<p><strong>Did you know</strong>: A string is an array of characters. You can ask for a character using its position in the string, just like you can do with arrays.</p>
+</blockquote>
+<hr />
+<ul>
+<li><a href="#arrays">Arrays</a></li>
+<li><a href="#syntax">Syntax</a><ul>
+<li><a href="#declaring-an-array">Declaring an array</a></li>
+<li><a href="#initializing-an-array">Initializing an array</a></li>
+<li><a href="#declaring-and-initializing-an-array">Declaring and initializing an array</a></li>
+<li><a href="#an-empty-array">An empty array</a></li>
+</ul>
+</li>
+<li><a href="#built-in-properties-and-methods">Built-in properties and methods</a></li>
+<li><a href="#accessing-array-elements">Accessing array elements</a></li>
+<li><a href="#array-editing">Array editing</a></li>
+<li><a href="#printing-an-array">Printing an array</a></li>
+</ul>
+<h2 id="syntax">Syntax</h2>
+<h3 id="declaring-an-array">Declaring an array</h3>
+<p>Declare an array by declaring its <a href="../2_data_types/">type</a> followed by square brackets:</p>
+<pre><code class="language-c#">string[] arrayOfStrings;
+int[] arrayOfInts;
+double[] arrayOfDoubles;
+</code></pre>
+<h3 id="initializing-an-array">Initializing an array</h3>
+<p>Initialize an array by calling a new instance of the array class. The elements of the array are separated by commas and encapsulated in curly brackets:</p>
+<pre><code class="language-c#">arrayOfStrings = new string[] {&quot;hallo&quot;, &quot;beer&quot;, &quot;kijken&quot;};
+</code></pre>
+<blockquote>
+<p><strong>Note:</strong> We <a href="../11_classes/#instantiation-of-an-object">instantiating an object</a> from the class Array, but the syntax deviates from the standard: use <code>type[]</code> instead of <code>Array</code>.</p>
+</blockquote>
+<h3 id="declaring-and-initializing-an-array">Declaring and initializing an array</h3>
+<p>You can also declare and initialize the array in one step, in that case you don't need to use the <code>new type[]</code> syntax:</p>
+<pre><code class="language-c#">string[] arrayOfStrings = {&quot;hallo&quot;, &quot;beer&quot;, &quot;kijken&quot;};
+</code></pre>
+<h4 id="an-empty-array">An empty array</h4>
+<p>What is you don't know yet what the content of your array will be? You can declare an empty array as follows:</p>
+<pre><code class="language-c#">string[0] arrayOfStrings = new string[8];
+</code></pre>
+<ul>
+<li>This array has 8 strings</li>
+<li>This array now contains <em>null</em> values at every position</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> Empty arrays of strings contain <em>null</em> as values, empty arrays of integers contain 0 as values.</p>
+</blockquote>
+<h2 id="built-in-properties-and-methods">Built-in properties and methods</h2>
+<table>
+<thead>
+<tr>
+<th><a href="../11_classes/#properties">Property</a>/method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>arrayX.Length</code></td>
+<td>Returns the number of elements in the array</td>
+</tr>
+<tr>
+<td><code>Array.IndexOf(arrayX, valueX)</code></td>
+<td>Returns the index of <code>valueX</code> in <code>arrayX</code></td>
+</tr>
+<tr>
+<td><code>Array.Sort(arrayX)</code></td>
+<td>Returns an array with the same elements as the input but in ascending order (<code>int[]</code>, <code>float[]</code>...), or alphabetical order (<code>char[]</code> and <code>string[]</code>)</td>
+</tr>
+<tr>
+<td><code>Array.Find(arrayX, lambda expression)</code></td>
+<td>Returns the first element of <code>arrayX</code> that matches the condition defined in the lambda expression</td>
+</tr>
+<tr>
+<td><code>Array.Reverse(arrayX)</code></td>
+<td>Returns an array in which the elements are rearranged from last to first</td>
+</tr>
+<tr>
+<td><code>Array.Clear(arrayX)</code></td>
+<td>Returns an empty array (null or 0 as values), optionally define the range you want to clear (overload method)</td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://learn.microsoft.com/en-us/dotnet/api/system.array?view=net-8.0">Documentation of all Array class properties and methods</a></p>
+<h2 id="accessing-array-elements">Accessing array elements</h2>
+<p>As mentioned before, every element in the array has a position. We call this the index of the element. The first element has an index of 0, the second an index of 1, the third and index of 2...</p>
+<p><em>Example:</em> Access the third element of the arrayOfStrings</p>
+<pre><code class="language-c#">string thirdElement = arrayOfStrings[2];
+</code></pre>
+<h2 id="array-editing">Array editing</h2>
+<p>Arrays are initialized to have a predefined length. this cannot be changed.
+However, the elements of the array can be changed as follows:</p>
+<pre><code class="language-c#">arrayOfStrings[1] = &quot;newvalue&quot;;
+</code></pre>
+<p>The second element of <code>arrayOfStrings</code> has now changed to "newvalue" overwriting the element that was there before.</p>
+<h2 id="printing-an-array">Printing an array</h2>
+<p>Printing an array to the console does not print its contents. Instead you need to use the <code>String.Join(string, string[])</code> method to concatenates all the elements of a string array (<code>string[]</code>), with a specific separator (<code>string</code>).</p>
+<p><em>Example:</em> </p>
+<pre><code class="language-c#">string[] nationalities = {&quot;belgian&quot;, &quot;dutch&quot;, &quot;german&quot;, &quot;american&quot;};
+Console.WriteLine(String.Join(&quot;\n&quot;, nationalities));
+/* output will be: 
+&quot;belgian&quot;
+&quot;dutch&quot;
+&quot;german&quot;
+&quot;american&quot;*/
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../8_alternate_expressions/" class="btn btn-neutral float-left" title="Alternate expressions"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../10_loops/" class="btn btn-neutral float-right" title="Loops">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../8_alternate_expressions/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../10_loops/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

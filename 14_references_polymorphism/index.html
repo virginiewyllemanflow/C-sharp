@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>References and polymorphism - My Docs</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "References and polymorphism";
+        var mkdocs_page_input_path = "14_references_polymorphism.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> My Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../2_data_types/">Data types</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../3_arithmetic_operations/">Arithmetic operations</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../4_working_with_text/">Working with text</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../5_boolean/">Booleans</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../6_conditional_statements/">Conditional statements</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../7_methods/">Methods</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../8_alternate_expressions/">Alternate expressions</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../9_data_structures_arrays/">Arrays</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../10_loops/">Loops</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../11_classes/">Classes</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../12_interfaces/">Interfaces</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../13_inheritance/">Inheritance</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">References and polymorphism</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#reference-vs-value-types">Reference vs Value types</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#reference-types">Reference types</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#value-types">Value types</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#assigning-a-new-variable-to-an-existing-one">Assigning a new variable to an existing one</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#comparison-of-variables-with-boolean-expressions">Comparison of variables (with boolean expressions)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#references-of-different-types">References of different types</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#use-of-references-of-different-type-than-the-object-it-refers-to">Use of references of different type than the object it refers to</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#polymorphism">Polymorphism</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#up-and-downcasting-of-references">Up-and downcasting of references</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#missing-vs-unassigned-reference-variables">Missing vs unassigned reference variables</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../15_object_class/">The object class</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../16_strings_advanced/">Strings (advanced)</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../17_lists/">Lists</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../18_LINQ/">LINQ</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">My Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">References and polymorphism</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="references-and-polymorphism">References and polymorphism</h1>
+<hr />
+<p>In C# some types are <strong>reference types</strong>, while others are <strong>value types</strong>. Variables of a value type actually hold data, while variables of a reference type hold a reference to data. 
+This has implications when you assign a new variable to an existing one: a new copy of the data is created for value types, but merely a new reference to the same data is created for reference types.</p>
+<hr />
+<ul>
+<li><a href="#references-and-polymorphism">References and polymorphism</a></li>
+<li><a href="#reference-vs-value-types">Reference vs Value types</a><ul>
+<li><a href="#reference-types">Reference types</a></li>
+<li><a href="#value-types">Value types</a></li>
+<li><a href="#assigning-a-new-variable-to-an-existing-one">Assigning a new variable to an existing one</a></li>
+<li><a href="#comparison-of-variables-with-boolean-expressions">Comparison of variables (with boolean expressions)</a></li>
+</ul>
+</li>
+<li><a href="#references-of-different-types">References of different types</a><ul>
+<li><a href="#use-of-references-of-different-type-than-the-object-it-refers-to">Use of references of different type than the object it refers to</a></li>
+</ul>
+</li>
+<li><a href="#polymorphism">Polymorphism</a></li>
+<li><a href="#up-and-downcasting-of-references">Up-and downcasting of references</a></li>
+<li><a href="#missing-vs-unassigned-reference-variables">Missing vs unassigned reference variables</a></li>
+</ul>
+<h2 id="reference-vs-value-types">Reference vs Value types</h2>
+<h3 id="reference-types">Reference types</h3>
+<p>Remember, reference types refer to a place in memory, they don't hold actual data.</p>
+<p>The reference types in C# are:</p>
+<ul>
+<li><code>class</code></li>
+<li><code>interface</code></li>
+<li><code>delegate</code></li>
+<li><code>object</code></li>
+<li><code>string</code> (immutable, behavior is different)</li>
+<li><code>array</code></li>
+<li><code>dynamic</code></li>
+</ul>
+<h3 id="value-types">Value types</h3>
+<p>Remember, value types hold actual data. All primitive data types are value types.</p>
+<p>The value types in C# are:</p>
+<ul>
+<li><code>int</code></li>
+<li><code>bool</code></li>
+<li><code>char</code></li>
+<li><code>(s)byte</code></li>
+<li><code>(u)short</code></li>
+<li><code>(u)long</code></li>
+<li><code>float</code></li>
+<li><code>double</code></li>
+<li><code>decimal</code></li>
+<li><code>struct</code></li>
+<li><code>enum</code></li>
+</ul>
+<h3 id="assigning-a-new-variable-to-an-existing-one">Assigning a new variable to an existing one</h3>
+<p>When assigning a new variable to an existing one, their independence depends on wether they are value or reference types. Lets look at some examples to understand the difference.</p>
+<p>Example value type:</p>
+<pre><code class="language-c#">int int1 = 20;
+int int2 = int1;
+int2 = 10;
+Console.WriteLine(int1); //output: 20
+Console.WriteLine(int2); //output: 10
+</code></pre>
+<p>Example reference type:</p>
+<pre><code class="language-c#">Forest forest1 = new Forest();
+Forest forest2 = forest1;
+forest1.name = &quot;Leen&quot;
+forest2.name = &quot;Woud&quot;;
+Console.WriteLine(forest1); //output: &quot;Woud&quot;
+Console.WriteLine(forest2); //output: &quot;Woud&quot;
+</code></pre>
+<h3 id="comparison-of-variables-with-boolean-expressions">Comparison of variables (with boolean expressions)</h3>
+<p>We compare two variables with a comparison operator:</p>
+<p><code>variable1 == variable2;</code></p>
+<p>This expression performs a different check depending on wether the variables are value or reference types. The comparison expression returns <code>true</code> if the variables of type:</p>
+<ul>
+<li>value type: hold the same data (<strong>value comparison</strong>)</li>
+<li>reference type: refer to the same location in memory (<strong>referential comparison</strong>)</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> When two independently created objects hold class instances with the same values, the check will return <code>false</code>.</p>
+</blockquote>
+<h2 id="references-of-different-types">References of different types</h2>
+<p>It is possible to create a refer to an object of a certain class (e.g. <code>Dog</code>) using a variable of its parent class (<code>Animal</code>) or with the interface (<code>IFourLegged</code>) it implements.</p>
+<p>These references of class <code>Animal</code> or of interface <code>IFourLegged</code> are equal to the original <code>Dog</code> variable in referential comparison:</p>
+<pre><code class="language-c#">Dog pluto = new Dog();
+Animal apluto = pluto;
+IFourLegged ipluto = pluto;
+Console.writeLine(pluto == apluto); // returns true
+Console.writeLine(pluto == ipluto); // returns true
+Console.writeLine(apluto == ipluto); // returns true
+</code></pre>
+<p>However, we can only use methods or properties of the <code>Animal</code> class on <code>apluto</code>, and we can only use the properties and methods defined in <code>IFourLegged</code> on <code>ipluto</code>. Essentially, the variables point to the same location in memory but can only access the properties and methods determined by their decalred type.</p>
+<h3 id="use-of-references-of-different-type-than-the-object-it-refers-to">Use of references of different type than the object it refers to</h3>
+<p>Maybe you wonder when you need reference to an object of a different type than the object itself. Let up find out through an example:</p>
+<pre><code class="language-c#">Dog pluto = new Dog();
+Dog snoopy = new Dog();
+Cat mousti = new Cat();
+Cat kitty = new Cat();
+
+// if we had no references of different types:
+pluto.Sleep();
+snoopy.Sleep();
+mousti.Sleep();
+kitty.Sleep();
+
+// simplified and cleaned code thanks to references of different types
+Animal[] animals = new Animal[] {pluto, snoopy, mousti, kitty};s
+foreach (Animal a in animals)
+{
+  a.Sleep();
+}
+</code></pre>
+<p>Imagine that you instantiate a bunch of animals from <code>Animal</code> subclasses <code>Dog</code> an <code>Cat</code>. If you want to make all of them sleep, you need to duplicate code for each variable and can't use a loop, because items in an array must be of one type. However, you can create a list of <code>Animal</code> references to your animals, and loop through it.</p>
+<blockquote>
+<p><strong>Important:</strong> The variables in <code>animals</code> are <code>Animal</code> references to <code>Dog</code> and <code>Cat</code> objects!
+We can only call properties and methods of the <code>Animal</code> class but we will get values according to their implementation defined in the <code>Dog</code> and <code>Cat</code> classes.
+This is due to <a href="#polymorphism">polymorphism</a></p>
+<p><strong>Note:</strong> You can also create references to the <a href="15_object_class">Object type</a> if you don't know any common interfaces or base classes.</p>
+</blockquote>
+<h2 id="polymorphism">Polymorphism</h2>
+<p>Polymorphism is a Greek word that means <em>to have many forms</em>. In C# polymorphism means that</p>
+<ul>
+<li>Object can be identified by more than one type, or referred to by more than one type.</li>
+<li>Objects maintain functionality unique to their data type (even if referenced with a different type, see <a href="#use-of-references-of-different-type-than-the-object-it-refers-to">uses of references</a>)</li>
+</ul>
+<p>For a concrete example, please refer to this <a href="https://www.youtube.com/watch?v=nYCMW3kfTvslymorphism">video</a>.</p>
+<h2 id="up-and-downcasting-of-references">Up-and downcasting of references</h2>
+<p><strong>Upcasting</strong> of references is <strong>creating a base class or interface reference from a subclass reference</strong>. This will always work and can be done implicitly.</p>
+<p><strong>Downcasting</strong> of references is <strong>creating a subclass reference from a base class or interface reference</strong>. This will only work when the reference referred to an object of the subclass type and must be done explicitly to acknowledge that you are taking the risk that the operation might fail.</p>
+<p>To illustrate (<code>Book</code> is the base class and <code>Dissertation</code> the subclass):</p>
+<pre><code class="language-c#">
+Dissertation diss = new Dissertation();
+
+// upcast
+Book bdiss = diss;
+
+// successful downcast: bdiss referred to a dissertation object
+Dissertation ddiss = (Dissertation)bdiss;
+</code></pre>
+<pre><code class="language-c#">Book bk = new Book();
+
+// unsuccessful downcast: bk did not refer to a dissertation object
+Dissertation dbk = (Dissertation)bk;
+</code></pre>
+<h2 id="missing-vs-unassigned-reference-variables">Missing vs unassigned reference variables</h2>
+<p>In C# there is a difference between empty/missing references:</p>
+<p><code>Book bk = null;</code></p>
+<p>And unassigned references:</p>
+<p><code>Book bk2;</code></p>
+<p>You can use missing references for operations because they have a value (null), but not unassigned references. This is illustrated below:</p>
+<pre><code class="language-c#">// missing reference bk of type Book
+Book bk = null;
+Console.WriteLine(bk); //prints nothing because empty
+Console.WriteLine(bk == null); //prints true
+
+// unassigned reference bk2 of type Book
+Book bk2;
+Console.WriteLine(bk); // err: use of unassigned variable bk2
+Console.WriteLine(bk2 == null); // err: use of unassigned variable bk2
+
+// contains 5 unassigned Book type references in an array, but C# automatically then assigns null to them
+Book[] books = new Book[5];
+// contains 5 missing Book type references in an array (functionally equivalent to the statement above)
+Book[] books = new Book[] {null, null, null, null, null}
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../13_inheritance/" class="btn btn-neutral float-left" title="Inheritance"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../15_object_class/" class="btn btn-neutral float-right" title="The object class">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../13_inheritance/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../15_object_class/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

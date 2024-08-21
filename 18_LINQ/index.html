@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>LINQ - My Docs</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "LINQ";
+        var mkdocs_page_input_path = "18_LINQ.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> My Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../2_data_types/">Data types</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../3_arithmetic_operations/">Arithmetic operations</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../4_working_with_text/">Working with text</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../5_boolean/">Booleans</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../6_conditional_statements/">Conditional statements</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../7_methods/">Methods</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../8_alternate_expressions/">Alternate expressions</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../9_data_structures_arrays/">Arrays</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../10_loops/">Loops</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../11_classes/">Classes</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../12_interfaces/">Interfaces</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../13_inheritance/">Inheritance</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../14_references_polymorphism/">References and polymorphism</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../15_object_class/">The object class</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../16_strings_advanced/">Strings (advanced)</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../17_lists/">Lists</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">LINQ</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#namespace">Namespace</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#linq-queries">LINQ queries</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#return-type">return type</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#var-variables">Var variables</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#queries">Queries</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#query-syntax">Query syntax</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#method-syntax">Method syntax</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#query-vs-method-syntax">Query vs Method syntax</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#linq-with-other-data-structures">LINQ with other data structures</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">My Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">LINQ</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="linq">LINQ</h1>
+<hr />
+<p><strong>LINQ</strong> stands for <strong>Language Integrated Query</strong> and is a C# (add-on) feature that provides a query syntax to use in C# scripts to retrieve and manipulate data from data sources (databases, XML files...).</p>
+<hr />
+<ul>
+<li><a href="#linq">LINQ</a></li>
+<li><a href="#namespace">Namespace</a></li>
+<li><a href="#linq-queries">LINQ queries</a><ul>
+<li><a href="#return-type">return type</a></li>
+<li><a href="#var-variables">Var variables</a></li>
+<li><a href="#queries">Queries</a></li>
+<li><a href="#query-syntax">Query syntax</a></li>
+<li><a href="#method-syntax">Method syntax</a><ul>
+<li><a href="#where">Where()</a></li>
+<li><a href="#select">Select()</a></li>
+</ul>
+</li>
+<li><a href="#query-vs-method-syntax">Query vs Method syntax</a></li>
+</ul>
+</li>
+<li><a href="#linq-with-other-data-structures">LINQ with other data structures</a></li>
+</ul>
+<h2 id="namespace">Namespace</h2>
+<p><code>System.Linq</code> is the namespace that we need to include in our <code>.cs</code> file if we want to use LINQ:</p>
+<pre><code class="language-c#">using System.Linq;
+</code></pre>
+<h2 id="linq-queries">LINQ queries</h2>
+<h3 id="return-type">return type</h3>
+<p>LINQ queries return either a single value or an object of type <code>IEnumerable[T]</code>. The length of <code>IEnumerable[T]</code> objects can be assessed with <code>x.Count()</code>, and we can use <code>foreach</code> loops on them.</p>
+<blockquote>
+<p><strong>Note:</strong> <code>Count()</code> is a method that is available thanks to the namespace <code>System.Linq</code>, don't confuse it with the <code>Count</code> property of <a href="../17_lists/">Lists</a>.</p>
+</blockquote>
+<h3 id="var-variables">Var variables</h3>
+<p>When we write a LINQ query, we usually save the result in a variable. However, we might not always be sure of the return type. How do we initialize the variable without a type in C#?</p>
+<p>The solution is the <code>var</code> keyword, it indicates that the C# compiler should determine the type of the variable.</p>
+<h3 id="queries">Queries</h3>
+<p>The same LINQ query can be written in either Query syntax or Method syntax.</p>
+<p>Since <code>where/Where()</code> and <code>select/Select()</code> can be used either as keywords or as methods, we simply call them operators in the context of LINQ</p>
+<h4 id="query-syntax">Query syntax</h4>
+<p>Query syntax looks similar to SQL and is usually a multi-line statement.</p>
+<p>They are <code>from - where - select</code> statements, or <code>from - select</code> statements. Only <code>where</code> is optional. Lets look at each part separately with an example:</p>
+<pre><code class="language-c#">var longNames = from name in names
+where name.Length &gt; 10
+select name.ToUpper();
+</code></pre>
+<ul>
+<li><code>from</code> iterates over the elements of the data structure</li>
+<li><code>where</code> assesses a condition for each member, and filters elements that meet the condition</li>
+<li><code>select</code> determines what is returned for each (filtered) element, can be just the element or a transformed element</li>
+</ul>
+<h4 id="method-syntax">Method syntax</h4>
+<p>Method syntax looks more similar to regular C#, and is a method call. LINQ Methods can be chained in one statement.</p>
+<h5 id="where">Where()</h5>
+<p>The <code>Where()</code> method:</p>
+<pre><code class="language-c#">var longNames = names.Where(n =&gt; n.Length &gt; 10);
+</code></pre>
+<p><code>Where()</code> takes a lambda expression to assess each element of the data structure against a condition. Each element for which <code>true</code> is returned is added to the new collection.</p>
+<h5 id="select">Select()</h5>
+<p>The <code>Select()</code> method is used when we want to transform elements of a data structure. It can be all elements or elements filtered by the <code>Where()</code> method:</p>
+<pre><code class="language-c#">// select to transform all elements in a data structure
+var upperNames = names
+.Select(n =&gt; n.ToUpper());
+// filter some elements and then select to transform them
+var longUpperNames = names
+.Where(n =&gt; n.Length &gt; 10)
+.Select(n =&gt; n.ToUpper());
+</code></pre>
+<p><code>Select()</code> takes a lambda expression.</p>
+<h4 id="query-vs-method-syntax">Query vs Method syntax</h4>
+<p>The rule of thumb is to use Method syntax for single-operator queries and Query syntax for all other queries.</p>
+<h2 id="linq-with-other-data-structures">LINQ with other data structures</h2>
+<p>We can use LINQ for arrays, but also for lists. The syntax is the same. Basically, any type that supports <code>foreach</code> loops can be used.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../17_lists/" class="btn btn-neutral float-left" title="Lists"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../17_lists/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

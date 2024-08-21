@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Lists - My Docs</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Lists";
+        var mkdocs_page_input_path = "17_lists.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> My Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../2_data_types/">Data types</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../3_arithmetic_operations/">Arithmetic operations</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../4_working_with_text/">Working with text</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../5_boolean/">Booleans</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../6_conditional_statements/">Conditional statements</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../7_methods/">Methods</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../8_alternate_expressions/">Alternate expressions</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../9_data_structures_arrays/">Arrays</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../10_loops/">Loops</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../11_classes/">Classes</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../12_interfaces/">Interfaces</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../13_inheritance/">Inheritance</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../14_references_polymorphism/">References and polymorphism</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../15_object_class/">The object class</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../16_strings_advanced/">Strings (advanced)</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Lists</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#syntax">Syntax</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#accessing-and-editing-list-elements">Accessing and editing list elements</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#namespace-generic-collections">Namespace generic collections</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#generic-collections">Generic collections</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#lists-are-dynamic">Lists are dynamic</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#other-built-in-properties-and-methods">Other built-in properties and methods</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#why-use-arrays">Why use arrays?</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../18_LINQ/">LINQ</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">My Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Lists</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="lists">Lists</h1>
+<hr />
+<p>Lists might remind you of <a href="../9_data_structures_arrays/">arrays</a> because they have similar characteristics: both are a sequential collection of values and can hold any type. But unlike arrays, lists have a flexible length, they automatically track the number of elements in the list, and you can work with multiple list items at once using methods.</p>
+<hr />
+<ul>
+<li><a href="#lists">Lists</a></li>
+<li><a href="#syntax">Syntax</a><ul>
+<li><a href="#accessing-and-editing-list-elements">Accessing and editing list elements</a></li>
+</ul>
+</li>
+<li><a href="#namespace-generic-collections">Namespace generic collections</a><ul>
+<li><a href="#generic-collections">Generic collections</a></li>
+</ul>
+</li>
+<li><a href="#lists-are-dynamic">Lists are dynamic</a></li>
+<li><a href="#other-built-in-properties-and-methods">Other built-in properties and methods</a></li>
+<li><a href="#why-use-arrays">Why use arrays?</a></li>
+</ul>
+<h2 id="syntax">Syntax</h2>
+<p>To declare an array of strings we used the following syntax:</p>
+<pre><code class="language-c#">// empty array, must specify # of elements
+string[] emptyArray = new string[3]
+// array with values
+string[] letterArray = new string[] {&quot;x&quot;, &quot;y&quot;, &quot;z&quot;};
+</code></pre>
+<p>To declare a list of strings we use:</p>
+<pre><code class="language-c#">// empty list, don't need to specify # of elements
+List&lt;string&gt; emptyList = new List&lt;string&gt;();
+// list with values
+List&lt;string&gt; letterList = new List&lt;string&gt; {&quot;x&quot;, &quot;y&quot;, &quot;z&quot;};
+</code></pre>
+<h3 id="accessing-and-editing-list-elements">Accessing and editing list elements</h3>
+<p>The syntax for accessing and editing list elements is identical to the syntax for array element <a href="../9_data_structures_arrays/#accessing-array-values">accessing</a> and <a href="../9_data_structures_arrays/#array-editing">editing</a>.</p>
+<h2 id="namespace-generic-collections">Namespace generic collections</h2>
+<p>To work with lists in C#, we need to include a namespace in our code. Just add the line:</p>
+<pre><code class="language-c#">using System.Collections.Generic;
+</code></pre>
+<p>This references <em>generic collections</em>, a group of classes to which the list class belongs.</p>
+<blockquote>
+<p><strong>Note:</strong> Dictionaries are also a class belonging to generic collections.</p>
+</blockquote>
+<h3 id="generic-collections">Generic collections</h3>
+<p>Generic collections are data structures that are defined without specifying a type. Only upon creation of an instance, the type of the collection is defined (<code>List&lt;string&gt;</code> vs <code>List&lt;double&gt;</code>). The formal class name of lists is <code>List&lt;T&gt;</code> for this reason.</p>
+<blockquote>
+<p><strong>Note:</strong> Even though arrays are not generic collections, there also isn't a separate class for every array type (only <code>System.Array</code>)</p>
+</blockquote>
+<h2 id="lists-are-dynamic">Lists are dynamic</h2>
+<p>Lists are basically the dynamic version of arrays, we can add/remove one or more elements to/from the list using methods. The indexes change when list elements are removed and added. </p>
+<blockquote>
+<p><strong>Note:</strong> To avoid errors for trying to access index values that do not exist, you can find the max index value of a list <code>x</code> at a given moment by calling <code>x.Count-1</code>.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>x.Add(elementA)</code></td>
+<td>Add one element, elementA to the list</td>
+</tr>
+<tr>
+<td><code>x.Remove(elementA)</code></td>
+<td>Remove one element, elementA from the list. Returns a boolean to indicate if this was successful</td>
+</tr>
+<tr>
+<td><code>x.AddRange(new T[] {elementA, elementB,...})</code>*</td>
+<td>Add multiple elements, e.g. elementA and elementB to the list</td>
+</tr>
+<tr>
+<td><code>x.InsertRange(ind, new T[] {elementA, elementB,...})</code>*</td>
+<td>Add multiple elements, e.g. elementA and elementB to the list at (not after!) the index specified by <code>ind</code></td>
+</tr>
+<tr>
+<td><code>x.RemoveRange(new T[] {elementA, elementB,...})</code>*</td>
+<td>Remove multiple elements, e.g. elementA and elementB to the list</td>
+</tr>
+<tr>
+<td><code>x.GetRange(ind, count)</code></td>
+<td>Returns a list containing <code>count</code> elements from list <code>x</code> starting from index <code>ind</code></td>
+</tr>
+<tr>
+<td><code>x.Clear()</code></td>
+<td>Remove all elements from the list, the count also changes</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Note:</strong> The <code>AddRange()</code> and <code>RemoveRange()</code> list methods accept any <code>IEnumerable</code> type. This includes lists, dictionaries, hashsets, queues, arrays...</p>
+</blockquote>
+<h2 id="other-built-in-properties-and-methods">Other built-in properties and methods</h2>
+<table>
+<thead>
+<tr>
+<th>Property/method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>x.Count</code></td>
+<td>Returns the number of elements in the list*</td>
+</tr>
+<tr>
+<td><code>x.Contains(elementA)</code></td>
+<td>Returns a boolean, true is the element, elementA is a member of the list</td>
+</tr>
+<tr>
+<td><code>x.Reverse()</code></td>
+<td>Reverses the order of the elements in the list</td>
+</tr>
+<tr>
+<td><code>x.Reverse(ind, count)</code></td>
+<td>Overload of <code>x.Reverse()</code> where you specify what portion of the list to reverse, <code>count</code> elements starting from <code>ind</code></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Note:</strong> For the number of elements in an array or string, we use <code>.Length</code>. For Lists we use <code>.Count</code>, this distinction stresses the difference between fixed length types and flexible types that must be counted.</p>
+</blockquote>
+<h2 id="why-use-arrays">Why use arrays?</h2>
+<p>Lists actually use arrays under the hood, copying all members to a new array with the modified length whenever necessary. Therefore, using an array is faster and makes more sense when you have a fixed number of elements.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../16_strings_advanced/" class="btn btn-neutral float-left" title="Strings (advanced)"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../18_LINQ/" class="btn btn-neutral float-right" title="LINQ">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../16_strings_advanced/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../18_LINQ/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Classes - My Docs</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Classes";
+        var mkdocs_page_input_path = "11_classes.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> My Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../2_data_types/">Data types</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../3_arithmetic_operations/">Arithmetic operations</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../4_working_with_text/">Working with text</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../5_boolean/">Booleans</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../6_conditional_statements/">Conditional statements</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../7_methods/">Methods</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../8_alternate_expressions/">Alternate expressions</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../9_data_structures_arrays/">Arrays</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../10_loops/">Loops</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Classes</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#encapsulation">Encapsulation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#built-in-classes">Built-in classes</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#defining-a-class">Defining a class</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#instantiating-an-object">Instantiating an object</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#class-members">Class members</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#fields">Fields</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#properties">Properties</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#automatic-properties">Automatic properties</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#get-only-properties">Get-only properties</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#methods">Methods</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#constructors">Constructors</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#public-versus-private-class-members">Public versus private class members</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#static-class-members">Static class members</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#static-constructors">Static constructors</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#static-classes">Static classes</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#main">Main</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../12_interfaces/">Interfaces</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../13_inheritance/">Inheritance</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../14_references_polymorphism/">References and polymorphism</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../15_object_class/">The object class</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../16_strings_advanced/">Strings (advanced)</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../17_lists/">Lists</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../18_LINQ/">LINQ</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">My Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Classes</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="classes">Classes</h1>
+<hr />
+<p>In C#, classes are custom data types; blueprints for creating objects. Objects are instances of a class and they can contain fields, properties, and methods. Classes can be custom-defined or built-in. Class names are in PascalCase.</p>
+<hr />
+<ul>
+<li><a href="#classes">Classes</a></li>
+<li><a href="#encapsulation">Encapsulation</a></li>
+<li><a href="#built-in-classes">Built-in classes</a></li>
+<li><a href="#defining-a-class">Defining a class</a></li>
+<li><a href="#instantiating-an-object">Instantiating an object</a></li>
+<li><a href="#class-members">Class members</a><ul>
+<li><a href="#fields">Fields</a></li>
+<li><a href="#properties">Properties</a></li>
+<li><a href="#automatic-properties">Automatic properties</a></li>
+<li><a href="#get-only-properties">Get-only properties</a></li>
+<li><a href="#methods">Methods</a></li>
+<li><a href="#constructors">Constructors</a><ul>
+<li><a href="#constructor-overloading">Constructor overloading</a></li>
+</ul>
+</li>
+<li><a href="#public-versus-private-class-members">Public versus private class members</a></li>
+<li><a href="#static-class-members">Static class members</a></li>
+<li><a href="#static-constructors">Static constructors</a></li>
+</ul>
+</li>
+<li><a href="#static-classes">Static classes</a></li>
+<li><a href="#main">Main</a></li>
+</ul>
+<h2 id="encapsulation">Encapsulation</h2>
+<p>Encapsulation is a characteristic of classes. It is the ability to bundle related data (properties) and methods into a type, and protect them from other code accessing it inappropriately. This is a key feature of object-oriented programming.</p>
+<p>Encapsulation makes it easier to:
+- reuse code
+- organize code</p>
+<h2 id="built-in-classes">Built-in classes</h2>
+<p><a href="../2_data_types/">Data types</a> like <code>string</code> and <a href="../9_data_structures_arrays/"><code>array</code></a> in C# are actually classes. For instance, when you create a string variable, it is an instance of the <code>String</code> class, and you can use various methods and properties defined in the <code>String</code> class.</p>
+<h2 id="defining-a-class">Defining a class</h2>
+<p>Classes are defined in a separate file, usually called <code>ClassName.cs</code>. <code>Program</code> and other classes can access each other if they share a <code>namespace</code>, or when specified with the keyword <code>using</code>.</p>
+<p>Syntax: Define a class <code>Forest</code> in the <code>namespace BasicClasses</code></p>
+<pre><code class="language-c#">using System;
+
+namespace BasicClasses
+{
+    class Forest {
+        code of the class;
+    }
+}
+</code></pre>
+<h2 id="instantiating-an-object">Instantiating an object</h2>
+<p>To instantiate an object means to create an instance of a class. Use the keyword <code>new</code> followed by <code>ClassName()</code>.</p>
+<p>Syntax: Instantiate a Forest object</p>
+<pre><code class="language-c#">Forest lembeekseBossen = new Forest();
+</code></pre>
+<h2 id="class-members">Class members</h2>
+<h3 id="fields">Fields</h3>
+<p>Fields are pieces of data that are variable for each instance of a class. Class fields are defined as follows:</p>
+<pre><code class="language-c#">class Forest {
+    public string name;
+}
+</code></pre>
+<p>Public fields of an object can be instantiated and called using the object name and dot notation.</p>
+<pre><code class="language-c#">Forest f = new Forest();
+f.name = &quot;Zoniënwoud&quot;;
+Console.WriteLine(f.name);
+</code></pre>
+<h3 id="properties">Properties</h3>
+<p>Some class fields also have a corresponding property. Properties have getters and setters that define the conditions to retrieve (get) or set a value. Getters and setters are methods.
+While properties often have a corresponding private field, it is not strictly required. Properties are usually named with a capitalized version of the corresponding field.</p>
+<blockquote>
+<p><strong>Note:</strong> The purpose of a corresponding private field is to encapsulate the field and limit access to it; it is not accessible from outside the class definition.</p>
+</blockquote>
+<p>Most basic syntax:</p>
+<pre><code class="language-c#">class Forest {
+    private string name;
+    public string Name
+    {
+        // the name field is set to the value given to Name
+        set {name = value;}
+        // when getting the Name property you will get name
+        get {return name;}
+    }
+}
+</code></pre>
+<pre><code class="language-c#">Forest f = new Forest();
+f.Name = &quot;leen&quot;; //set Name and name
+Console.WriteLine(f.Name); //get Name which is name
+/* because name is private,
+you cannot get or set name with f.name,
+you need to use f.Name. */
+</code></pre>
+<p>You can also limit what values can be set. </p>
+<p><em>Example:</em></p>
+<pre><code class="language-c#">class Forest {
+    private string name;
+    public string Name
+    {
+        set 
+        {
+            if ((value == &quot;field&quot;) || (value == &quot;city&quot;))
+            {
+                name = value;
+            }
+            else
+            {
+                name = &quot;Not actually a forest&quot;;
+            }
+        }
+        get {return name;}
+    }
+}
+</code></pre>
+<h4 id="automatic-properties">Automatic properties</h4>
+<p>The basic getter and setter syntax can be shortened using automatic properties. In that case you don't need to define a field, since a hidden (private) field will be defined in the background automatically.</p>
+<p>Long syntax:</p>
+<pre><code class="language-c#">class Forest() {
+    private string name;
+    public string Name {
+        get {return name;}
+        set {name = value;}
+    }
+}
+</code></pre>
+<p>Short syntax:</p>
+<pre><code class="language-c#">class Forest() {
+    public string Name
+    {get; set;}
+}
+</code></pre>
+<blockquote>
+<p><strong>Important:</strong> If you want to use the automatic property, you cannot reference the backing field directly, you should then always refer to the property!</p>
+</blockquote>
+<h4 id="get-only-properties">Get-only properties</h4>
+<p>In some situations you want a property to have a getter, but no setter (if you don't want the value to be freely adaptable). There are two options:</p>
+<ul>
+<li>Don't define a setter:</li>
+</ul>
+<p>To set the value of a get-only property without setter use:
+- A constructor with parameter: <code>this.Property = parameter;</code>
+- An initializer <code>public string Property {get;} = "value";</code></p>
+<pre><code class="language-c#">public int Age {
+    get;
+}
+// Using automatic properties
+</code></pre>
+<ul>
+<li>Define a private setter (only methods in the class can set the property value):</li>
+</ul>
+<pre><code class="language-c#">public int Age {
+    get;
+    private set;
+}
+// Using automatic properties
+</code></pre>
+<h3 id="methods">Methods</h3>
+<p><a href="../7_methods/">Methods</a> are chunks of code that perform a task of action. Methods belong to classes (e.g. Program). Therefore they determine how a class instance can behave.</p>
+<p>Methods are also called using dot notation:</p>
+<p><code>objectName.MethodName();</code></p>
+<p>Methods in a custom-defined class are defined in the same way as in the Program class: see <a href="../7_methods/">methods</a>. They also have an access modifier, return type and name.</p>
+<blockquote>
+<p><strong>Note:</strong> For example you can define an automatic property with a private setter and set the value using a public method. This is a safe and robust manner to control access to the class members.</p>
+</blockquote>
+<h4 id="constructors">Constructors</h4>
+<p>Constructors are special methods that set class properties when you instantiate a new object. This eliminates the need to set all properties separately by calling their setter.</p>
+<p>Constructors:</p>
+<ul>
+<li>Have signatures that look like other methods but they do not have a return type and their name is the same as the class name e.g. <code>public Forest() {}</code></li>
+<li>Are automatically created and <em>parameterless</em> when not specifically defined</li>
+<li>Are called when instantiating an object:</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> It is best practice to set the properties specifically on the instance that is created, to avoid confusion. Do this by using <code>this.Property = field</code>.</p>
+</blockquote>
+<pre><code class="language-c#">Forest lembeekseBossen = new Forest();
+/* The constructor is called using new
+and then Forest() is the constructor */
+</code></pre>
+<ul>
+<li>You can set properties by setting the property names equal to the constructor parameter inputs.</li>
+</ul>
+<pre><code class="language-c#">class Forest {
+    // define constructor method
+    public Forest(string name, string biome) {
+        this.Name = name;
+        this.Biome = biome;
+        this.Age = 0;
+    }
+    // define automatic properties, biome can be set outside class
+    public string Biome {
+        get;
+        set;
+    }
+    // define automatic get-only properties
+    public string Name {
+        get;
+        private set;
+    }
+    public int Age {
+        get;
+        private set;
+    }
+}
+</code></pre>
+<pre><code class="language-c#">//Sets properties Name and Biome (and also hidden fields)
+Forest lembeekseBossen = new Forest(&quot;LB&quot;, &quot;Continental&quot;);
+</code></pre>
+<h5 id="constructor-overloading">Constructor overloading</h5>
+<p>Since constructors are methods, you can also have multiple versions of one constructor with a different set of parameters or functionality. This is called <a href="../7_methods/#method-overloading">overloading</a>.</p>
+<p>There are three options to handle this:
+- Set-up separate constructor methods, each specifying how to set all properties. This option will result in redundant code, where you assign the same property in different constructors.
+- Set-up one constructor method with <a href="../7_methods/#method-parameters">default parameter values</a> for optional parameters
+- Set-up separate constructor methods but avoid redundant code by using <code>: this()</code> to call another constructor from the same method:</p>
+<pre><code class="language-c#">class Forest {
+    public Forest(string name, string biome)
+    {
+        this.Name = name;
+        this.Biome = biome;
+    }
+    // : this() calls the constructor above
+    // to set this.Name of this constructor to name
+    // and this.Biome to &quot;unknown&quot;
+    public Forest(string name) : this(name, &quot;Unknown&quot;)
+    {
+        // using this option you can also add additional functionality
+        Console.WriteLine(&quot;No biome specified, default value used.&quot;)
+    }
+    public string Name {
+        get; set;
+    }
+    public string Biome {
+        get; set;
+    }
+}
+</code></pre>
+<h3 id="public-versus-private-class-members">Public versus private class members</h3>
+<p>Class members have <strong>access modifiers</strong> that ensure protection and encapsulation of classes, either:</p>
+<ul>
+<li><strong>public</strong>: accessible by other classes in the name space</li>
+<li><strong>private</strong>: only accessible from within the class itself</li>
+</ul>
+<p>It is good practice to define fields as private, and the corresponding properties as public. Since properties often include validation or conditions for setting and getting fields, defining the field as private ensures that code cannot bypass validation by directly calling or setting the field. Only the property can be used. Methods should be public unless you only want to call them from within the class.</p>
+<h3 id="static-class-members">Static class members</h3>
+<p>Remember we talked about <a href="../7_methods/#static-vs-instance-methods">static vs instance methods</a>? Not only class methods, but all class members can be static.</p>
+<p>Static class members belong to the class itself, not to its objects. To define a static class member, use the <strong>keyword <code>static</code></strong> after the access modifier and before the return type:</p>
+<p><strong>access modifier - static keyword - return type - class member;</strong></p>
+<p><em>For example:</em></p>
+<pre><code class="language-c#">public static string Description {
+    get; set;
+}
+</code></pre>
+<p>To access a static member, we use the <strong>dot notation on the class</strong>, not on the object (as with instance members):</p>
+<pre><code class="language-c#">// Call static property of Forest class
+Console.WriteLine(Forest.Description);
+// Call instance property of member &quot;lembeekseBossen&quot; of Forest class
+Console.WriteLine(lembeekseBossen.Biome);
+</code></pre>
+<blockquote>
+<p><strong>Important:</strong> Static methods can only access static fields and properties.</p>
+</blockquote>
+<h4 id="static-constructors">Static constructors</h4>
+<p>If you want certain static fields and properties to be set, you can do this using a <strong>static constructor</strong>:</p>
+<p>For example:</p>
+<pre><code class="language-c#">static Forest() {
+    description = &quot;blablabla&quot;;
+}
+</code></pre>
+<p>The constructor:</p>
+<ul>
+<li>Uses the keyword static</li>
+<li>Does not accept an access modifier</li>
+</ul>
+<blockquote>
+<p><strong>Notes:</strong>
+- Static constructors are automatically called before calling a static member of a class, or before instantiating a new object.
+- You cannot use non-static constructors to set static members, because they set properties and fields per class instance.</p>
+</blockquote>
+<h2 id="static-classes">Static classes</h2>
+<p>Not only class members, but also whole classes can be static! Static classes do not have class instances. In other words, you cannot instantiate an object from a static class. Instead, they are used to group methods, like the <code>Math</code> class. The syntax for defining static classes is:</p>
+<pre><code class="language-c#">static class ClassName
+{
+
+}
+</code></pre>
+<blockquote>
+<p><strong>Note:</strong> Since the class is static, you are not obliged to declare every member as static, although it is still best practice to do so.</p>
+</blockquote>
+<h2 id="main">Main</h2>
+<p>Lets break down the Main() method of our Program class.</p>
+<pre><code class="language-c#">Class Program
+{
+    public static void Main(string[] args)
+    {
+
+    }
+}
+</code></pre>
+<ul>
+<li>Program is a class</li>
+<li>Main() is a method of the class Program:<ul>
+<li>static: Main() acts on program itself, not on program instances (<code>Program.Main()</code>)</li>
+<li>public: Main() can be accessed by other classes of the same namespace</li>
+<li>void: Main() does not return anything</li>
+<li>string[] args: Main() has one argument, args which is an array of strings</li>
+</ul>
+</li>
+</ul>
+<p>Each time you run <code>dotnet run</code>, Program.Main() is called. We can include arguments on the command line, like <code>dotnet run arg1 arg2 arg3</code> that will be converted into an array as the args parameter.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../10_loops/" class="btn btn-neutral float-left" title="Loops"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../12_interfaces/" class="btn btn-neutral float-right" title="Interfaces">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../10_loops/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../12_interfaces/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

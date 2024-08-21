@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Methods - My Docs</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Methods";
+        var mkdocs_page_input_path = "7_methods.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> My Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../2_data_types/">Data types</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../3_arithmetic_operations/">Arithmetic operations</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../4_working_with_text/">Working with text</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../5_boolean/">Booleans</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../6_conditional_statements/">Conditional statements</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Methods</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#calling-a-method">Calling a method</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#input-arguments">Input: arguments</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#capturing-method-output">Capturing method output</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#chaining-methods">Chaining methods</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#creating-a-new-method">Creating a new method</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#method-parameters">Method parameters</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#calling-a-method-with-arguments-in-a-different-order">Calling a method with arguments in a different order</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#method-overloading">Method overloading</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#method-output">Method output</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#return">Return</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#out">Out</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#method-declaration-with-out">Method declaration with out</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#method-calling-with-out">Method calling with out</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#methods-as-method-arguments">Methods as method arguments</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#static-vs-instance-methods">Static vs instance methods</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#static-methods">Static methods</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#instance-methods">Instance methods</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../8_alternate_expressions/">Alternate expressions</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../9_data_structures_arrays/">Arrays</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../10_loops/">Loops</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../11_classes/">Classes</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../12_interfaces/">Interfaces</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../13_inheritance/">Inheritance</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../14_references_polymorphism/">References and polymorphism</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../15_object_class/">The object class</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../16_strings_advanced/">Strings (advanced)</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../17_lists/">Lists</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../18_LINQ/">LINQ</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">My Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Methods</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="methods">Methods</h1>
+<hr />
+<p>Methods are reusable sets of instructions to perform a certain task. Some methods are built-in to C#, but you can also define your own.</p>
+<hr />
+<ul>
+<li><a href="#methods">Methods</a></li>
+<li><a href="#calling-a-method">Calling a method</a></li>
+<li><a href="#input-arguments">Input: arguments</a></li>
+<li><a href="#capturing-method-output">Capturing method output</a></li>
+<li><a href="#chaining-methods">Chaining methods</a></li>
+<li><a href="#creating-a-new-method">Creating a new method</a><ul>
+<li><a href="#method-parameters">Method parameters</a></li>
+<li><a href="#calling-a-method-with-arguments-in-a-different-order">Calling a method with arguments in a different order</a></li>
+</ul>
+</li>
+<li><a href="#method-overloading">Method overloading</a></li>
+<li><a href="#method-output">Method output</a><ul>
+<li><a href="#return">Return</a></li>
+<li><a href="#out">Out</a></li>
+<li><a href="#method-declaration-with-out">Method declaration with out</a></li>
+<li><a href="#method-calling-with-out">Method calling with out</a></li>
+</ul>
+</li>
+<li><a href="#methods-as-method-arguments">Methods as method arguments</a></li>
+<li><a href="#static-vs-instance-methods">Static vs instance methods</a><ul>
+<li><a href="#static-methods">Static methods</a></li>
+<li><a href="#instance-methods">Instance methods</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="calling-a-method">Calling a method</h2>
+<p>You can call a method by writing the method's name and adding parentheses.</p>
+<p>e.g. Console.WriteLine();</p>
+<h2 id="input-arguments">Input: arguments</h2>
+<p>arguments are input you can provide to some methods. Arguments are provided in the parentheses when calling a method.</p>
+<p>e.g. Console.WriteLine("hello"); The argument of this method is the string "hello"</p>
+<p>When there is more than one argument, use comma's to separate them.</p>
+<p>e.g. Math.Min(3,5)</p>
+<h2 id="capturing-method-output">Capturing method output</h2>
+<p>Some methods <strong>return</strong> a value, how can you capture this output? You can do this using a variable</p>
+<p>e.g. int minNumber = Math.Min(2,5);</p>
+<h2 id="chaining-methods">Chaining methods</h2>
+<p>You can chain multiple methods. The innermost method returns a value that is used as the input for the outer method.</p>
+<p>e.g. Console.WriteLine("hello".Substring(2,2));</p>
+<h2 id="creating-a-new-method">Creating a new method</h2>
+<p>Methods in C# have PascalCase names. The syntax for method definitions looks like this:</p>
+<pre><code class="language-c#">static void MyMethod()
+{
+    Code block that is executed when you call the method;
+}
+</code></pre>
+<p>In C# the code that your program runs is encapsulated in the <code>Main</code> method. All other method definitions, should be placed outside of the definition of <code>Main()</code>.</p>
+<pre><code class="language-c#">static void MyMethod()
+</code></pre>
+<p>This part is the <strong>method declaration</strong>. It consists of:
+- an <strong>access modifier</strong> (public, private)
+- optional keywords (like <a href="#static-methods">static</a>)
+- a <strong>return type</strong> (void, meaning that nothing is returned)
+- a <strong>name</strong> (MyMethod).</p>
+<blockquote>
+<p><strong>Note:</strong>
+- Sometimes no access modifier is specified, within a <a href="../11_classes/">class</a> the default is <code>private</code> and within an interface it is always <code>public</code>.
+- Sometimes no return type is needed (e.g. the <a href="../11_classes/#constructors">constructor method</a> of a class)</p>
+</blockquote>
+<h3 id="method-parameters">Method parameters</h3>
+<p>To allow your own methods to accept input arguments, we need to define placeholders for those arguments and instruct the method what to do with them. These argument placeholders are called parameters.</p>
+<p>The syntax looks like this (of course the method could contain any code):</p>
+<pre><code class="language-c#">static void MyMethod(string myFirstParameter, int mySecondParameter = 0)
+{
+    Console.WriteLine(myFirstParameter, mySecondParameters);
+}
+</code></pre>
+<ul>
+<li>When there is more than one parameter, they are separated by a comma</li>
+<li>When you want a parameter to be optional use <code>=</code> and a default value (if you don't do this you will get errors when calling the method because you did not define a parameter)</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> Parameters can only be used within the scope of their methods, because they are not defined outside of the method.</p>
+</blockquote>
+<h4 id="calling-a-method-with-arguments-in-a-different-order">Calling a method with arguments in a different order</h4>
+<p>Arguments are passed to methods in the order the parameters are defined. You might get in trouble when a method has multiple optional parameters, and you want to pass an argument of the third parameter only. To fix this problem, you can name your arguments with the parameter name. In that case, the order does not matter anymore.</p>
+<p>Example:</p>
+<pre><code class="language-c#">static void MyMethod(
+    int myFirstP = 0,
+    int mySecondP = 1,
+    int myThirdP = 2,
+    int myForthP = 3)
+{
+    ...
+}
+static void Main()
+{
+    MyMethod(myThirdP: 3, myFirstP: 2);
+}
+</code></pre>
+<h2 id="method-overloading">Method overloading</h2>
+<p>Method overloading is a term used for when there are several methods with the same name but different parameters or a different number of parameters. This is useful if you want the same method to have different behavior based on its inputs.</p>
+<p>A method <strong>signature</strong> or declaration, on the other hand, is unique. It is the combination of the method name, its parameters and their order.</p>
+<h2 id="method-output">Method output</h2>
+<p>Method declarations contain the return type of their output. <strong>Void</strong> means there is no output value. If a method returns a type different from the stated return type, it will throw an error.</p>
+<h3 id="return">Return</h3>
+<p>Return is a keyword that is used in method code to allow it to return a value or variable. When return is used in a method, you must specify the type of the returned value in the method declaration as follows:</p>
+<pre><code class="language-c#">static int MyMethod() 
+{
+    return 1+5;
+}
+</code></pre>
+<h3 id="out">Out</h3>
+<p>The return keyword only allows you to return one value. What if you want your method to return more than one value? You can use return for the first value, and the <strong>out</strong> keyword for other values. </p>
+<h4 id="method-declaration-with-out">Method declaration with out</h4>
+<p>You use out in a parameter, with the syntax:</p>
+<pre><code class="language-c#">static string MyMethod(string name, out int age) 
+{
+    age = 25;
+}
+</code></pre>
+<ul>
+<li>You must declare the out parameter with a type.</li>
+<li>Out can only output a variable, because otherwise we can specify where it is stored.</li>
+<li>The out parameter (<code>age</code>) must be set to a value before the method ends (before the return statement?).</li>
+</ul>
+<h4 id="method-calling-with-out">Method calling with out</h4>
+<p>Calling the method will return the value you tell it to return AND save a value to the variable specified after out.</p>
+<pre><code class="language-c#">MyMethod(&quot;Virg&quot;, out int myAge) 
+</code></pre>
+<ul>
+<li>If you didn't declare the out argument (<code>myAge</code>) in the main code, you need to specify its type when calling the method.</li>
+<li>You need to specify the out parameter both when declaring the method and when calling it.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> Calling the method still only returns the value specified by the <code>return</code> keyword. If you want to access the <code>out</code> value, you will have to use the out variable after calling the method.</p>
+</blockquote>
+<h2 id="methods-as-method-arguments">Methods as method arguments</h2>
+<p>Some methods accept other methods as arguments, this method is then called one or more times in the body of the function using the argument (method name) and ().
+The <strong>method name (or definition) is passed as an argument</strong>, not the method with parentheses, since that would mean executing it there.</p>
+<p><em>Example:</em> Array.Find() returns the first array item for which the method returns 'true'.</p>
+<pre><code class="language-c#">Array.Find(array1, Method1);
+</code></pre>
+<blockquote>
+<p><strong>Note:</strong> Remember that you can recognize that a method has another method as its argument by the PascalCase of methods.</p>
+</blockquote>
+<h2 id="static-vs-instance-methods">Static vs instance methods</h2>
+<h3 id="static-methods">Static methods</h3>
+<p>Static methods belong to a class and are called on that class, not on an object of the class. To call a static method, you use the class name followed by the method name:</p>
+<pre><code class="language-c#">ClassName.MethodName(parameters)
+</code></pre>
+<p><em>Example:</em></p>
+<pre><code class="language-c#">Array.Sort(arrayX);
+</code></pre>
+<blockquote>
+<p><strong>Note:</strong> 
+- Static methods do not require an instance of the class to be called. Think of <code>Math.Floor()</code>, you do not need an instance of the Math class to call it.
+- The methods we define in our Program e.g. MyMethod(), are often static methods on the Program class. Because we are using the methods IN the Program class we don't need to specify the class name Program.MyMethod(), but we can shorten it to MyMethod().</p>
+<p><strong>Note:</strong> Please refer to the documentation on <a href="../11_classes/#static-class-members">classes</a> to read more about static class members.</p>
+</blockquote>
+<h3 id="instance-methods">Instance methods</h3>
+<p>Instance methods belong to instances of a class, not the class itself. To call an instance method, you use the instance name followed by the method name:</p>
+<pre><code class="language-c#">instanceName.MethodName(parameters);
+</code></pre>
+<p><em>Example:</em></p>
+<pre><code class="language-c#">stringX.subString(&quot;a&quot;, 3);
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../6_conditional_statements/" class="btn btn-neutral float-left" title="Conditional statements"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../8_alternate_expressions/" class="btn btn-neutral float-right" title="Alternate expressions">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../6_conditional_statements/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../8_alternate_expressions/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Working with text - My Docs</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Working with text";
+        var mkdocs_page_input_path = "4_working_with_text.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> My Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../2_data_types/">Data types</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../3_arithmetic_operations/">Arithmetic operations</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Working with text</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#escape-sequences-in-strings">Escape sequences in strings</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#string-concatenation">String concatenation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#string-interpolation">String interpolation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#string-properties-and-methods">String properties and methods</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#bracket-notation">Bracket notation</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../5_boolean/">Booleans</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../6_conditional_statements/">Conditional statements</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../7_methods/">Methods</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../8_alternate_expressions/">Alternate expressions</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../9_data_structures_arrays/">Arrays</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../10_loops/">Loops</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../11_classes/">Classes</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../12_interfaces/">Interfaces</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../13_inheritance/">Inheritance</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../14_references_polymorphism/">References and polymorphism</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../15_object_class/">The object class</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../16_strings_advanced/">Strings (advanced)</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../17_lists/">Lists</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../18_LINQ/">LINQ</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">My Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Working with text</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="working-with-text">Working with text</h1>
+<ul>
+<li><a href="#working-with-text">Working with text</a></li>
+<li><a href="#escape-sequences-in-strings">Escape sequences in strings</a></li>
+<li><a href="#string-concatenation">String concatenation</a></li>
+<li><a href="#string-interpolation">String interpolation</a></li>
+<li><a href="#string-properties-and-methods">String properties and methods</a></li>
+<li><a href="#bracket-notation">Bracket notation</a></li>
+</ul>
+<h2 id="escape-sequences-in-strings">Escape sequences in strings</h2>
+<table>
+<thead>
+<tr>
+<th>Escape sequence</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>\ " \ "</td>
+<td>quotation marks in string</td>
+</tr>
+<tr>
+<td>\n</td>
+<td>line break in string</td>
+</tr>
+</tbody>
+</table>
+<h2 id="string-concatenation">String concatenation</h2>
+<p>Combine strings or strings and variables using string concatenation:</p>
+<p><code>Console.WriteLine("string1" + variable1 + "string2" + ".");</code></p>
+<blockquote>
+<p><strong>Note:</strong> If you concatenate a string with a variable of another type, it will automatically convert that variable to a string.</p>
+</blockquote>
+<h2 id="string-interpolation">String interpolation</h2>
+<p>If you want to combine variables and string text without having to use plus signs all the time, you can use string interpolation:</p>
+<p><code>Console.WriteLine($"Hello, my name is {name}. I am {age} years old.")</code></p>
+<blockquote>
+<p><strong>Note:</strong> If you interpolate a string with a variable of another type, it will automatically convert that variable to a string.</p>
+</blockquote>
+<h2 id="string-properties-and-methods">String properties and methods</h2>
+<p><a href="../11_classes/#properties">Properties</a> (e.g. Length) request data and we use <code>string.Property</code> as syntax, methods perform actions or computations and we use <code>string.Method()</code> as syntax.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.Length</code></td>
+<td>returns the number of characters of a string</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.IndexOf(x)</code></td>
+<td>returns the index (position starting from 0) of the first char of substring x <br> returns "-1" if the substring does not exist within the string</td>
+</tr>
+<tr>
+<td><code>.Substring(x, y)</code></td>
+<td>returns a substring starting from position x in the original string <br> if y is specified, the substring will be y characters long</td>
+</tr>
+<tr>
+<td><code>.ToUpper()</code></td>
+<td>convert string to uppercase</td>
+</tr>
+<tr>
+<td><code>.ToLower()</code></td>
+<td>convert string to lowercase</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Note:</strong> 
+- When you use methods like these, you can always check their documentation to see how to use them or for any restrictions.
+- The first character in a string has index 0. So the position 0 is the first character and position 1 is the second character.</p>
+</blockquote>
+<h2 id="bracket-notation">Bracket notation</h2>
+<p>To find the character at a certain position of a string, we use bracket notation. (This is similar to how you access values in an array):</p>
+<ul>
+<li><code>string[0]</code> returns the first character</li>
+<li><code>string[1]</code> returns the second character</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> In C# you can NOT use the index -1 to retrieve the last character of the string.</p>
+</blockquote>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../3_arithmetic_operations/" class="btn btn-neutral float-left" title="Arithmetic operations"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../5_boolean/" class="btn btn-neutral float-right" title="Booleans">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../3_arithmetic_operations/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../5_boolean/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
