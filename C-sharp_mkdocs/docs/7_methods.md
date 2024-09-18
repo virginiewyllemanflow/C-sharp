@@ -154,7 +154,7 @@ static string MyMethod(string name, out int age)
 }
 ```
 - You must declare the out parameter with a type.
-- Out can only output a variable, because otherwise we can specify where it is stored.
+- Out can only output a variable, because otherwise we can't specify where it is stored.
 - The out parameter (`age`) must be set to a value before the method ends (before the return statement?).
 
 #### Method calling with out
